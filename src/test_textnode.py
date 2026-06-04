@@ -30,13 +30,13 @@ class TestTextNodeHTMLNodeConversion(unittest.TestCase):
         html_node = text_node_to_html_node(node)
         self.assertEqual(html_node.tag, None)
         self.assertEqual(html_node.value, "This is a text node")
-    
+
     def test_bold(self):
         node = TextNode("This is a bold text", TextType.BOLD)
         html_node = text_node_to_html_node(node)
         self.assertEqual(html_node.tag, "b")
         self.assertEqual(html_node.value, "This is a bold text")
-    
+
     def test_link(self):
         node = TextNode("This is a link", TextType.LINK, "http://localhost:4040")
         html_node = text_node_to_html_node(node)
